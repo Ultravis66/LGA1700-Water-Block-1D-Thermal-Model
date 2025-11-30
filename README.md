@@ -210,19 +210,12 @@ The approach is widely used in electronics cooling, automotive thermal managemen
 MIT License - See LICENSE file for details
 
 ## Author
-
-Mitch - Senior Mechanical Engineer, CFD Specialist
-- 15+ years experience in computational fluid dynamics
-- Focus: Thermal management, aerodynamics, multi-physics simulation
-
-## Citation
-
-If you use this work, please cite:
+if you use this work, please cite:
 ```
 @misc{coldplate1d2024,
-  author = {Your Name},
+  author = Mitchell Stolk,
   title = {LGA1700 Water Block 1D Thermal Model},
-  year = {2024},
+  {November 2025},
   publisher = {GitHub},
   url = {https://github.com/yourusername/LGA1700-Water-Block-1D-Thermal-Model}
 }
