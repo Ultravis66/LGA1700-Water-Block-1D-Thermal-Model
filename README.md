@@ -197,6 +197,8 @@ The 1D model was validated against additional CFD simulations with varying conta
 | **Improved TIM** | 0.059 | 50.7 | 50.3 | **0.4** |
 | **Baseline** | 0.148 | 73.2 | 73.2 | **0.0** |
 
+![CPU Temperature Distribution](CPU_Temperature2.png)
+
 **Key Findings:**
 - Model accurately predicts temperature across a 2.5× range in contact resistance
 - Maximum error: 0.4°C (0.5% of temperature rise)
