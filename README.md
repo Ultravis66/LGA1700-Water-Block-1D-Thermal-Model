@@ -1,5 +1,5 @@
 # LGA1700-Water-Block-1D-Thermal-Model
-1D thermal resistance network for CPU cold plate optimization, calibrated against CFD simulations. Enables rapid parametric design studies to identify thermal bottlenecks and evaluate design modifications without re-running expensive 3D CFD (see my other repo: LGA1700-Water-Block-CFD-Simulation)
+1D thermal resistance network for CPU cold plate optimization, calibrated against CFD simulations. Enables rapid parametric design studies to identify thermal bottlenecks and evaluate design modifications without re-running expensive 3D CFD (see my other repo: [LGA1700-Water-Block-CFD-Simulation](https://github.com/Ultravis66/LGA1700-Water-Block-CFD-Simulation))
 
 A two-zone thermal resistance network model for CPU cold plate analysis, calibrated against high-fidelity CFD simulations. This tool enables rapid parametric design optimization without the computational cost of re-running 3D CFD.
 
