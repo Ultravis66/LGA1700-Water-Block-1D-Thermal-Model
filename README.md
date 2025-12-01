@@ -4,7 +4,7 @@
 A two-zone thermal resistance network model for CPU cold plate analysis, calibrated against high-fidelity CFD simulations. This tool enables rapid parametric design optimization without the computational cost of re-running 3D CFD.
 
 ![CPU Temperature Distribution](CPU_Temperature.png)
-*Temperature distribution from CFD validation (STAR-CCM+)*
+*Temperature distribution from CFD*
 
 ## Overview
 
