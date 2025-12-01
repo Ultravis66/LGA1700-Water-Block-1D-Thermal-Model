@@ -205,7 +205,7 @@ The approach is widely used in electronics cooling, automotive thermal managemen
 ## Author
 if you use this work, please cite:
 ```
-@misc{coldplate1d2024,
+@misc{coldplate1d2022,
   author = {Mitchell Stolk},
   title = {LGA1700 Water Block 1D Thermal Model},
   {November 2025},
