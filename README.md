@@ -24,9 +24,8 @@ The model accurately predicts CPU temperature, outlet temperature, and heat dist
 
 ## Model Architecture
 
-Two-Zone Thermal Resistance Model
----------------------------------
-
+**Two-Zone Thermal Resistance Model:**
+```
         [ CPU ]
            │
     ( R_contact )
@@ -39,8 +38,10 @@ Two-Zone Thermal Resistance Model
       │         │
  [ Fluid 1 ] [ Fluid 2 ]
     (Tb1)       (Tb2 = Tout)
+
 Fluid heating: Tin → Tb1 → Tb2
 Heat split: Q1 → Fluid 1, Q2 → Fluid 2
+```
 
 
 **Physics Captured:**
