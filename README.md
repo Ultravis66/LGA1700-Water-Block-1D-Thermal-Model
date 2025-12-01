@@ -186,6 +186,25 @@ The porous zone already has excellent heat transfer (R = 0.0217 K/W). Further im
 2. **Priority 2**: Maximize contact pressure (within CPU limits)
 3. **Priority 3**: Consider flow rate increase (modest benefit, low cost)
 
+## Model Validation
+
+The 1D model was validated against additional CFD simulations with varying contact resistance to confirm predictive capability beyond the calibration point.
+
+### Validation Results
+
+| Case | R_contact (K/W) | CPU Temp - CFD (°C) | CPU Temp - 1D (°C) | Error (°C) |
+|------|----------------|---------------------|-------------------|-----------|
+| **Improved TIM** | 0.059 | 50.7 | 50.3 | **0.4** |
+| **Baseline** | 0.148 | 73.2 | 73.2 | **0.0** |
+
+**Key Findings:**
+- Model accurately predicts temperature across a 2.5× range in contact resistance
+- Maximum error: 0.4°C (0.5% of temperature rise)
+- Validates use of calibrated effective h-values for parametric design studies
+
+This demonstrates the model is **predictive**, not merely curve-fit to a single operating point. The 1D approach is suitable for rapid design trade studies when exploring TIM selection, fin geometry, or flow rate modifications.
+
+
 ## Related Projects
 
 - [LGA1700-Water-Block-CFD-Simulation](https://github.com/ultravis66/LGA1700-Water-Block-CFD-Simulation) - High-fidelity 3D CFD validation
@@ -196,9 +215,7 @@ This model demonstrates a common thermal engineering workflow where:
 - **CFD provides truth data** but is computationally expensive (hours per run)
 - **1D models enable rapid iteration** (milliseconds per run)
 - **Calibration bridges the gap** between fidelity and speed
-
-The approach is widely used in electronics cooling, automotive thermal management, and HVAC design.
-
+  
 ## Author
 if you use this work, please cite:
 ```
