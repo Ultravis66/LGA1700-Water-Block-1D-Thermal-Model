@@ -35,12 +35,9 @@ The model accurately predicts CPU temperature, outlet temperature, and heat dist
     ┌─────────┴─────────┐
     ↓                   ↓
 [Porous Zone]      [Outlet Zone]
-  240 W (96%)        10 W (4%)
-  A = 1.27e-4 m²    A = 2.91e-4 m²
     ↓                   ↓
 [Fluid @ 306K] ────→ [Fluid @ 306K]
-    
-Total: 250 W heat rejection, 0.01 kg/s water flow
+
 ```
 
 **Physics Captured:**
