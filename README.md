@@ -39,7 +39,6 @@ Two-Zone Thermal Resistance Model
       │         │
  [ Fluid 1 ] [ Fluid 2 ]
     (Tb1)       (Tb2 = Tout)
-
 Fluid heating: Tin → Tb1 → Tb2
 Heat split: Q1 → Fluid 1, Q2 → Fluid 2
 
