@@ -6,10 +6,9 @@ Two-zone thermal resistance network calibrated against CFD results.
 Demonstrates how thermal engineers use simplified models for rapid 
 design optimization after CFD validation.
 
-Author: Mitch
-Date: 2024
+Author: Mitchell Stolk
+Date: November 2025
 """
-
 import numpy as np
 from scipy.optimize import fsolve
 from dataclasses import dataclass
@@ -306,6 +305,6 @@ def main():
     print(f"  Tcpu = {res.Tcpu:.2f} K  ({result_base.Tcpu - res.Tcpu:.2f} K reduction!)")
     print(f"  Outlet = {res.Tout:.2f} K\n")
 
-
 if __name__ == "__main__":
+
     main()
