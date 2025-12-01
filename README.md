@@ -28,20 +28,21 @@ Two-Zone Thermal Resistance Model
 ---------------------------------
 
         [ CPU ]
-          │
-    (R_contact)
-          │
-       [ Plate ]
-          │
-    ┌─────┴─────┐
-    │           │
- R_path,1    R_path,2
-    │           │
- [ Fluid 1 ]  [ Fluid 2 ]
-   (Tb1)        (Tb2 = Tout)
+           │
+    ( R_contact )
+           │
+        [ Plate ]
+           │
+      ┌────┴────┐
+      │         │
+ R_path,1   R_path,2
+      │         │
+ [ Fluid 1 ] [ Fluid 2 ]
+    (Tb1)       (Tb2 = Tout)
 
 Fluid heating: Tin → Tb1 → Tb2
 Heat split: Q1 → Fluid 1, Q2 → Fluid 2
+
 
 **Physics Captured:**
 - Contact resistance (CPU ↔ cold plate interface)
