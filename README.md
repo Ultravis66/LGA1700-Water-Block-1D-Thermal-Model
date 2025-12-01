@@ -197,6 +197,13 @@ The 1D model was validated against additional CFD simulations with varying conta
 | **Improved TIM** | 0.059 | 50.7 | 50.3 | **0.4** |
 | **Baseline** | 0.148 | 73.2 | 73.2 | **0.0** |
 
+| Case          | mdot (kg/s) | CPU Temp - CFD (°C) | CPU Temp - 1D (°C) | Error (°C) | ΔT_coolant CFD (°C) | ΔT_coolant 1D (°C) |
+| ------------- | ----------- | ------------------- | ------------------ | ---------- | ------------------- | ------------------ |
+| **High Flow** | **0.04**    | **69.53**           | **68.85**          | **0.68**   | **1.47**            | **1.49**           |
+
+
+
+
 ![CPU Temperature Distribution](CPU_Temperature2.png)
 
 **Key Findings:**
