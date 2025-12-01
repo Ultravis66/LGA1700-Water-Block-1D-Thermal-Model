@@ -222,9 +222,9 @@ This model demonstrates a common thermal engineering workflow where:
 if you use this work, please cite:
 ```
 @misc{coldplate1d2025,
-  author = {Mitchell Stolk},
+  author = {Stolk, Mitchell},
   title = {LGA1700 Water Block 1D Thermal Model},
-  {November 2025},
+  {2025},
   publisher = {GitHub},
   url = {https://github.com/ultravis66/LGA1700-Water-Block-1D-Thermal-Model}
 }
