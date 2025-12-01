@@ -17,7 +17,7 @@ The model accurately predicts CPU temperature, outlet temperature, and heat dist
 
 ## Key Features
 
-- **CFD-Calibrated**: Validated against [LGA1700-Water-Block-CFD-Simulation](https://github.com/yourusername/LGA1700-Water-Block-CFD-Simulation)
+- **CFD-Calibrated**: Validated against [LGA1700-Water-Block-CFD-Simulation](https://github.com/ultravis66/LGA1700-Water-Block-CFD-Simulation)
 - **Fast Parametric Studies**: Instant evaluation of design changes
 - **Thermal Bottleneck Identification**: Quantifies resistance contributions
 - **Design Optimization Scenarios**: Pre-configured "what-if" studies
