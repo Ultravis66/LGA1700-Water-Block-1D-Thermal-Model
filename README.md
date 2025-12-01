@@ -228,7 +228,27 @@ This model demonstrates a common thermal engineering workflow where:
 - **CFD provides truth data** but is computationally expensive (hours per run)
 - **1D models enable rapid iteration** (milliseconds per run)
 - **Calibration bridges the gap** between fidelity and speed
-  
+
+## Calibration Methodology
+
+The effective heat transfer coefficients were calibrated using CFD results:
+
+### Running the Calibration
+```bash
+python calibrate_h_values.py
+```
+This script:
+1. Takes CFD target values (Tcpu, heat split)
+2. Solves inverse problem to find h-values that match
+3. Uses `scipy.optimize.fsolve` to minimize residuals
+4. Outputs calibrated coefficients for use in main analysis
+
+### Calibration Results
+- h_porous = 1.18×10⁶ W/m²-K (effective)
+- h_outlet = 6.99×10³ W/m²-K
+
+**Note:** These are effective parameters that lump complex porous medium physics into simplified convective coefficients.
+
 ## Author
 if you use this work, please cite:
 ```
