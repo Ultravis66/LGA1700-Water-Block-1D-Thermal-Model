@@ -217,12 +217,6 @@ if you use this work, please cite:
   title = {LGA1700 Water Block 1D Thermal Model},
   {November 2025},
   publisher = {GitHub},
-  url = {https://github.com/yourusername/LGA1700-Water-Block-1D-Thermal-Model}
+  url = {https://github.com/ultravis66/LGA1700-Water-Block-1D-Thermal-Model}
 }
-```
-```
 
-**Also create `requirements.txt`:**
-```
-numpy>=1.20.0
-scipy>=1.7.0
