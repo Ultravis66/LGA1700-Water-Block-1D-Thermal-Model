@@ -34,10 +34,11 @@ The model accurately predicts CPU temperature, outlet temperature, and heat dist
               ↓
     ┌─────────┴─────────┐
     ↓                   ↓
-[Porous Zone]      [Outlet Zone]
+[Porous Zone]      [Porous Zone]
     ↓                   ↓
-[Fluid @ 306K] ────→ [Fluid @ 306K]
-
+[Fluid @ 306K] ───── [Fluid @ 306K]
+                 ↓
+              outlet
 ```
 
 **Physics Captured:**
