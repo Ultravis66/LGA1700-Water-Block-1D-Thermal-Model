@@ -24,22 +24,23 @@ The model accurately predicts CPU temperature, outlet temperature, and heat dist
 
 ## Model Architecture
 
-**Two-Zone Thermal Network:**
-```
-         [CPU @ 346K]
-              ↓ 
-      (R_contact = 0.14 K/W) ← 76% of total resistance
-              ↓
-      [Cold Plate @ 311K]
-              ↓
-    ┌─────────┴─────────┐
-    ↓                   ↓
-[Porous Zone]      [Porous Zone]
-    ↓                   ↓
-[Fluid @ 306K] ───── [Fluid @ 306K]
-                 ↓
-              outlet
-```
+Two-Zone Thermal Network:
+
+        [CPU @ 346 K]
+              │
+   (R_contact ≈ 0.14 K/W)   ← ~76% of total resistance
+              │
+        [Cold Plate @ 311 K]
+           ┌────────┴────────┐
+           │                 │
+   R_path,porous       R_path,outlet
+   (cond+conv)         (cond+conv)
+           │                 │
+ [Porous Zone Fluid]   [Outlet Zone Fluid]
+     (Tb₁ ≈ 302–304 K)     (Tb₂ ≈ 306 K = Tout)
+
+Upstream fluid enters at Tin ≈ 300 K, is heated by Q₁ in the porous zone to Tb₁, 
+then further heated by Q₂ in the outlet zone to Tb₂ = Tout.
 
 **Physics Captured:**
 - Contact resistance (CPU ↔ cold plate interface)
