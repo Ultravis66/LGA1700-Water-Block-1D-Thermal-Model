@@ -26,22 +26,27 @@ The model accurately predicts CPU temperature, outlet temperature, and heat dist
 
 **Two-Zone Thermal Network:**
 ```
-        [CPU] 
-          ↓ (Contact Resistance - R_contact)
-    [Cold Plate]
-          ↓
-    ┌─────┴─────┐
-    ↓           ↓
-[Porous]    [Outlet]  ← Parallel thermal paths
-  Zone 1      Zone 2
-    ↓           ↓
- [Fluid] ───→ [Fluid]  ← Serial flow
+         [CPU @ 346K]
+              ↓ 
+      (R_contact = 0.14 K/W) ← 76% of total resistance
+              ↓
+      [Cold Plate @ 311K]
+              ↓
+    ┌─────────┴─────────┐
+    ↓                   ↓
+[Porous Zone]      [Outlet Zone]
+  240 W (96%)        10 W (4%)
+  A = 1.27e-4 m²    A = 2.91e-4 m²
+    ↓                   ↓
+[Fluid @ 306K] ────→ [Fluid @ 306K]
+    
+Total: 250 W heat rejection, 0.01 kg/s water flow
 ```
 
 **Physics Captured:**
 - Contact resistance (CPU ↔ cold plate interface)
 - Conduction through copper plate
-- Convective heat transfer to coolant
+- Convective heat transfer to coolant (water)
 - Cumulative fluid heating through zones
 
 ## Results
@@ -55,10 +60,12 @@ The model accurately predicts CPU temperature, outlet temperature, and heat dist
 ### Thermal Resistance Breakdown
 | Component | Resistance (K/W) | % of Total |
 |-----------|------------------|------------|
-| **Contact Resistance** | 0.1414 | **76.3%** ← Primary bottleneck |
-| Parallel Paths | 0.0208 | 11.2% |
-| - Porous zone | 0.0217 | - |
-| - Outlet zone | 0.4982 | - |
+| **Contact Resistance (CPU ↔ Plate)** | 0.1414 | **76.3%** ← Primary bottleneck |
+| **Thermal Paths (Plate ↔ Fluid)** | 0.0438 | **23.7%** |
+| - Parallel combination | 0.0208 | - |
+| -- Porous zone path | 0.0217 | - |
+| -- Outlet zone path | 0.4982 | - |
+| **Total System Resistance** | **0.1852** | **100%** 
 
 ### Key Finding
 **Contact resistance dominates thermal performance.** Improving the CPU-to-cold plate interface has 10× greater impact than adding fins or increasing flow rate.
@@ -101,7 +108,7 @@ The model accurately predicts CPU temperature, outlet temperature, and heat dist
 ## Installation
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/LGA1700-Water-Block-1D-Thermal-Model.git
+git clone https://github.com/ultravis66/LGA1700-Water-Block-1D-Thermal-Model.git
 cd LGA1700-Water-Block-1D-Thermal-Model
 
 # Install dependencies
@@ -146,7 +153,7 @@ print(f"CPU Temperature: {result.Tcpu:.2f} K")
 
 The effective heat transfer coefficients were calibrated to match CFD results:
 
-1. **CFD Simulation** (STAR-CCM+):
+1. **CFD Simulation**
    - 3D conjugate heat transfer
    - Porous media model for fin array
    - Validation: CPU temp = 346.3 K
@@ -181,20 +188,10 @@ The porous zone already has excellent heat transfer (R = 0.0217 K/W). Further im
 1. **Priority 1**: Optimize TIM selection and application
 2. **Priority 2**: Maximize contact pressure (within CPU limits)
 3. **Priority 3**: Consider flow rate increase (modest benefit, low cost)
-4. **Avoid**: Over-engineering fin density beyond baseline
-
-## Files
-```
-.
-├── coldplate_thermal_analysis.py    # Main analysis script
-├── requirements.txt                  # Python dependencies
-├── CPU_temp_distribution.png         # CFD validation image
-└── README.md                         # This file
-```
 
 ## Related Projects
 
-- [LGA1700-Water-Block-CFD-Simulation](https://github.com/yourusername/LGA1700-Water-Block-CFD-Simulation) - High-fidelity 3D CFD validation
+- [LGA1700-Water-Block-CFD-Simulation](https://github.com/ultravis66/LGA1700-Water-Block-CFD-Simulation) - High-fidelity 3D CFD validation
 
 ## Technical Background
 
@@ -204,10 +201,6 @@ This model demonstrates a common thermal engineering workflow where:
 - **Calibration bridges the gap** between fidelity and speed
 
 The approach is widely used in electronics cooling, automotive thermal management, and HVAC design.
-
-## License
-
-MIT License - See LICENSE file for details
 
 ## Author
 if you use this work, please cite:
